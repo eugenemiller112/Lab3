@@ -65,13 +65,12 @@ There are no major differences between smokers and nonsmokers in terms of height
 
 ---
 
-__Individual Plots__
-
+### Johnny Tamanaha
 ```{r}
 smoke.labs <- c("Nonsmoker", "Smoker")
 names(smoke.labs) <- c("0", "1")
 ggplot(cdc) +
-  geom_freqpoly(mapping=aes(x=age, color=genhlth)) +
+  geom_freqpoly(mapping=aes(x=age, color=genhlth), alpha=.6) +
   facet_wrap(~smoke100, labeller = labeller(smoke100 = smoke.labs)) +
   labs(x="Age", y="Density", color="General Health", title="General Health Density vs Age Split by Smoker/NonSmoker")
 ```
