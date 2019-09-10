@@ -25,7 +25,6 @@ cdc <- as_tibble(cdc)
 
 ---
 
-<<<<<<< HEAD
 __Team Plot:__
 ```{r}
 ggplot(cdc) +
@@ -35,7 +34,6 @@ ggplot(cdc) +
 =======
 ## Conclusion:
 
->>>>>>> master
 ---
 
 ## Recommendation for Action:
@@ -66,7 +64,7 @@ There are no major differences between smokers and nonsmokers in terms of height
 ---
 
 ### Johnny Tamanaha
-```{r}
+```{r, echo=FALSE}
 smoke.labs <- c("Nonsmoker", "Smoker")
 names(smoke.labs) <- c("0", "1")
 ggplot(cdc) +
@@ -75,5 +73,6 @@ ggplot(cdc) +
   labs(x="Age", y="Density", color="General Health", title="General Health Density vs Age Split by Smoker/NonSmoker")
 ```
 
-Findings: Smokers seem more likely to have poor health at a older age while non-smokers seem to be more likely to have excellent/very good health at a younger age. Density vs Age Split by Smoker/NonSmoker.
+**Findings**: Smokers seem more likely to have poor health at a older age while non-smokers seem to be more likely to have excellent/very good health at a younger age. Density vs Age Split by Smoker/NonSmoker.
 
+---
