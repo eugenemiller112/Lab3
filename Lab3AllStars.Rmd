@@ -16,7 +16,11 @@ __Why is this question important?__
 ---
 
 __Team Plot:__
-
+```{r}
+ggplot(cdc) +
+  geom_bar(mapping=aes(x=genhlth, fill=smoke100==1), position="dodge") +
+  labs(x="General Health", y="# of People", fill="Did You Smoke 100 Cigarettes?", title="Proportions of Subjects Who've Smoked 100 Cigarettes per Each General Health Category")
+```
 ---
 
 __Conclusion:__
