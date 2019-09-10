@@ -4,6 +4,12 @@ author: "Johnny Tamanaha, Emily Archambault, Eugene Miller, Kaiyuan Fan, Jingzhi
 date: "9/13/2019"
 output: html_document
 ---
+```{r, setup, echo = FALSE, message = FALSE}
+library(tidyverse)
+source("http://www.openintro.org/stat/data/cdc.R")
+cdc <- as_tibble(cdc)
+```
+
 
 ---
 
@@ -24,6 +30,29 @@ __Conclusion:__
 ---
 
 __Recommendation for Action:__
+
+---
+
+__Individual Sections:__
+
+### Eugene Miller
+```{r Eugenes_Code, echo = FALSE, message = FALSE}
+health.labs <- c("Excellent Health", "Very Good Health", "Good Health", "Fair Health", "Poor Health")
+names(health.labs) <- c("excellent", "very good", "good", "fair", "poor")
+smoke.labs <- c("Nonsmoker", "Smoker")
+names(smoke.labs) <- c("0", "1")
+
+ggplot(data = cdc, mapping = aes(x = weight, y = height)) +
+  geom_jitter() +
+  geom_smooth(mapping = aes(color = genhlth), se = FALSE) +
+  labs(title = "A Comparison of Height Versus Weight in Smokers and Nonsmokers Across Health Status", y = "Height", x = "Weight") +
+  guides(color = FALSE) +
+  theme(plot.title = element_text(hjust = 0.5, size = 12)) +
+  facet_wrap(genhlth~smoke100, labeller = labeller(smoke100 = smoke.labs, genhlth = health.labs))
+```
+
+__Explanation of Findings:__
+There are no major differences between smokers and nonsmokers in terms of height versus weight corrolations even when accounting for health status. This suggestes that health status plays a larger role in determening the ratio of one's height versus weight rather than whether or not an individual is a smoker. This would seem to make sense, as whether or not an individual smokes may not be the largest factor impacting their health. For example, a nonsmoker with a serious illness is likely to not have the same weight to height ratio as a smoker who otherwise is in perfect health. 
 
 ---
 
