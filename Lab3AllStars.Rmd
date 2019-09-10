@@ -4,7 +4,7 @@ author: "Johnny Tamanaha, Emily Archambault, Eugene Miller, Kaiyuan Fan, Jingzhi
 date: "9/13/2019"
 output: html_document
 ---
-```{r, setup, echo = FALSE, message = FALSE}
+```{r, setup, echo = FALSE, message = FALSE, error=TRUE}
 library(tidyverse)
 source("http://www.openintro.org/stat/data/cdc.R")
 cdc <- as_tibble(cdc)
@@ -64,7 +64,7 @@ There are no major differences between smokers and nonsmokers in terms of height
 ---
 
 ### Johnny Tamanaha
-```{r, echo=FALSE, messgae=FALSE}
+```{r, echo=FALSE, messgae=FALSE, error=TRUE}
 smoke.labs <- c("Nonsmoker", "Smoker")
 names(smoke.labs) <- c("0", "1")
 ggplot(cdc) +
