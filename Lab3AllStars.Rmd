@@ -26,7 +26,7 @@ cdc <- as_tibble(cdc)
 ---
 
 __Team Plot:__
-```{r}
+```{r, echo=FALSE}
 ggplot(cdc) +
   geom_bar(mapping=aes(x=genhlth, fill=smoke100==1), position="dodge") +
   labs(x="General Health", y="# of People", fill="Did You Smoke 100 Cigarettes?", title="Proportions of Subjects Who've Smoked 100 Cigarettes per Each General Health Category")
@@ -64,7 +64,7 @@ There are no major differences between smokers and nonsmokers in terms of height
 ---
 
 ### Johnny Tamanaha
-```{r, echo=FALSE}
+```{r, echo=FALSE, messgae=FALSE}
 smoke.labs <- c("Nonsmoker", "Smoker")
 names(smoke.labs) <- c("0", "1")
 ggplot(cdc) +
