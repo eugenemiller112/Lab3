@@ -108,3 +108,16 @@ labs(x= "age", y="count", fill = "genhlth", title = "Count number of people in d
 __Explanation of Findings:__
 
 In my plot, you can see the numbers of smokers and nonsmokers in different age health distribution. For nonsmokers, most of people have excellent general health. However for smokers, people in excellent generalhealth are less a lot. And the proportion of smokers whose in fair and poor general health are much more than the proportion of nonsmokers.
+
+### Emily Archambault
+
+```{r, echo=FALSE, message=FALSE, error=TRUE}
+ggplot(data = cdc) +
+ geom_col(mapping = aes(x = smoke100, y = hlthplan, color = smoke100), show.legend = FALSE) +
+ labs(y = "Subjects with Health Plan") +
+ facet_wrap(~smoke100, labeller = labeller(smoke100 = smoke.labs)) +
+ theme(axis.title.x=element_blank(), axis.text.x=element_blank(), axis.ticks.x=element_blank()) 
+```
+
+_Findings_:
+My plot compares the number of non-smokers and smokers who have a health care plan, and it finds that non-smokers have a higher rate of people covered by healthcare.
