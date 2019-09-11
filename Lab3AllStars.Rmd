@@ -96,7 +96,7 @@ smoke.labs <- c("Nonsmoker", "Smoker")
 names(smoke.labs) <- c("0", "1")
 ggplot(data = cdc, mapping = aes(x = age, color = genhlth)) + 
   geom_bar()+
-  facet_wrap(~ smoke100, nrow = 2)+
+  facet_wrap(~ smoke100,labeller = labeller(smoke100 = smoke.labs), nrow = 2)+
 labs(x= "age", y="count", fill = "genhlth", title = "Count number of people in different genhlth between different age")
 ```
 
