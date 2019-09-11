@@ -76,3 +76,15 @@ ggplot(cdc) +
 **Findings**: Smokers seem more likely to have poor health at a older age while non-smokers seem to be more likely to have excellent/very good health at a younger age. Density vs Age Split by Smoker/NonSmoker.
 
 ---
+
+### Kaiyuan Fan 
+```{r, echo=FALSE, messgae=FALSE, error=TRUE}
+ggplot(cdc, aes(x = smoke100))+
+ geom_bar(aes(fill = smoke100 == 1),alpha = 3/5, position = "identity", show.legend = TRUE) +
+ labs(x= "smoke100", y="count", fill = "has smoked 100 cigarettes", title = "Count number of people smoke 100 cigarettes or more")
+```
+  __Explanation: My plot is to count the number of people who  smokes and who does smoke.
+   If people smoke 100 cigarettes or more through life, then the smoke100 equals 1, which is green color on the plot. And if people doesn't smoke or smoke less than 100 cigarettes, the smoke100 equals 0, which is red showing on the plot. I find people who does not smoke are more than people smoke.
+
+
+---
