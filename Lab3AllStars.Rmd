@@ -4,7 +4,7 @@ author: "Johnny Tamanaha, Emily Archambault, Eugene Miller, Kaiyuan Fan, Jingzhi
 date: "9/13/2019"
 output: html_document
 ---
-```{r, setup, echo = FALSE, message = FALSE, error=TRUE}
+```{r, setup, echo = FALSE, message = FALSE, error=TRUE, warning=FALSE}
 library(tidyverse)
 source("http://www.openintro.org/stat/data/cdc.R")
 cdc <- as_tibble(cdc)
