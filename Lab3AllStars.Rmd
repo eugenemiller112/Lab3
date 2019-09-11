@@ -83,10 +83,23 @@ ggplot(cdc, aes(x = smoke100))+
  geom_bar(aes(fill = smoke100 == 1),alpha = 3/5, position = "identity", show.legend = TRUE) +
  labs(x= "smoke100", y="count", fill = "has smoked 100 cigarettes", title = "Count number of people smoke 100 cigarettes or more")
 ```
- 
   __Explanation: My plot is to count the number of people who  smokes and who does smoke.
    If people smoke 100 cigarettes or more through life, then the smoke100 equals 1, which is green color on the plot. And if people doesn't smoke or smoke less than 100 cigarettes, the smoke100 equals 0, which is red showing on the plot. I find people who does not smoke are more than people smoke.
 
 
-
 ---
+
+
+### Jingzhi Zhang
+```{r, echo=FALSE, messgae=FALSE, error=TRUE}
+smoke.labs <- c("Nonsmoker", "Smoker")
+names(smoke.labs) <- c("0", "1")
+ggplot(data = cdc, mapping = aes(x = age, color = genhlth)) + 
+  geom_bar()+
+  facet_wrap(~ smoke100, nrow = 2)+
+labs(x= "age", y="count", fill = "genhlth", title = "Count number of people in different genhlth between different age")
+```
+
+__Explanation of Findings:__
+
+In my plot, you can see the numbers of smokers and nonsmokers in different age health distribution. For nonsmokers, most of people have excellent general health. However for smokers, people in excellent generalhealth are less a lot. And the proportion of smokers whose in fair and poor general health are much more than the proportion of nonsmokers.
