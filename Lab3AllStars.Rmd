@@ -34,10 +34,11 @@ ggplot(data = cdc, aes(group = smoke100)) +
 
 ---
 
-<<<<<<< Updated upstream
-## Conclusion:
 
-=======
+
+
+
+
 ## Finding & Conclusion:
 From the team plot, we can see the percentage of nonsmoker is higher than the percentage of smoker in excellent and very good general health status. And in the good, fair and poor health status, the percentage of smoker is clearly higher than the nonsmoker.However there is no distinct difference between the percentages of smokers and nonsmokers under very good General Health. In conclusion, smoking do have harmful affect to health.
 
