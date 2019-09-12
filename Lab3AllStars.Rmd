@@ -69,7 +69,7 @@ There are no major differences between smokers and nonsmokers in terms of height
 ---
 
 ### Johnny Tamanaha
-```{r, echo=FALSE< message=FALSE}
+```{r, echo=FALSE, message=FALSE}
 smoke.labs <- c("Nonsmoker", "Smoker")
 names(smoke.labs) <- c("0", "1")
 
