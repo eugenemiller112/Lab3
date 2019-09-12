@@ -40,6 +40,10 @@ ggplot(data = cdc, aes(group = smoke100)) +
 ---
 
 ## Recommendation for Action:
+ 
+ Therefore, we conclude that smoking does harm to the health of people already. Obviously,  Smoking cessation is necessary. However, as we all know, It is hard to quit nicotine addiction. 
+Here are some recommendations for people who still smoke.  Firstly, Social organization should promote the effects of smoking, benefits of cessation for their lung condition and treatment options. On the other hand,  personal awareness of the health risks of tobacco was considered a necessary early intervention to dissuade people from starting and continuing to smoke.
+
 
 Therefore, we conclude that smoking does harm to the health of people already. Obviously,  Smoking cessation is necessary. However, as we all know, It is hard to quit nicotine addiction. 
 Here are some recommendations for people who still smoke.  Firstly, Social organization should promote the effects of smoking, benefits of cessation for their lung condition and treatment options. On the other hand,  personal awareness of the health risks of tobacco was considered a necessary early intervention to dissuade people from starting and continuing to smoke.
