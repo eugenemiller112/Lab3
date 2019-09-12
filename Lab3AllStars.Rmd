@@ -34,12 +34,18 @@ ggplot(data = cdc, aes(group = smoke100)) +
 
 ---
 
+<<<<<<< Updated upstream
 ## Conclusion:
 
+=======
+## Finding & Conclusion:
+From the team plot, we can see the percentage of nonsmoker is higher than the percentage of smoker in excellent and very good general health status. And in the good, fair and poor health status, the percentage of smoker is clearly higher than the nonsmoker.However there is no distinct difference between the percentages of smokers and nonsmokers under very good General Health. In conclusion, smoking do have harmful affect to health.
+>>>>>>> Stashed changes
 
 ---
 
 ## Recommendation for Action:
+<<<<<<< Updated upstream
  
  Therefore, we conclude that smoking does harm to the health of people already. Obviously,  Smoking cessation is necessary. However, as we all know, It is hard to quit nicotine addiction. 
 Here are some recommendations for people who still smoke.  Firstly, Social organization should promote the effects of smoking, benefits of cessation for their lung condition and treatment options. On the other hand,  personal awareness of the health risks of tobacco was considered a necessary early intervention to dissuade people from starting and continuing to smoke.
@@ -47,6 +53,8 @@ Here are some recommendations for people who still smoke.  Firstly, Social organ
 
 Therefore, we conclude that smoking does harm to the health of people already. Obviously,  Smoking cessation is necessary. However, as we all know, It is hard to quit nicotine addiction. 
 Here are some recommendations for people who still smoke.  Firstly, Social organization should promote the effects of smoking, benefits of cessation for their lung condition and treatment options. On the other hand,  personal awareness of the health risks of tobacco was considered a necessary early intervention to dissuade people from starting and continuing to smoke.
+=======
+>>>>>>> Stashed changes
 
 
 ---
