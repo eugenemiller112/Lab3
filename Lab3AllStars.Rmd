@@ -123,6 +123,10 @@ __Explanation of Findings:__
 
 In my plot, you can see the numbers of smokers and nonsmokers in different age health distribution. For nonsmokers, most of people have excellent general health. However for smokers, people in excellent generalhealth are less a lot. And the proportion of smokers whose in fair and poor general health are much more than the proportion of nonsmokers.
 
+
+---
+
+
 ### Emily Archambault
 
 ```{r, echo=FALSE, message=FALSE, error=TRUE}
@@ -135,11 +139,12 @@ coord_cartesian(xlim=c(-0.5,1.5), ylim=c(0,1.5)) +
 scale_size_continuous(range = c(0.5, 30)) + 
 theme(axis.title.x=element_blank(), axis.text.x=element_blank(), axis.ticks.x=element_blank()) + labs(title = "Comparison of Smokers and Non-Smokers with a Health Plan", y = "No Health Plan vs Health Plan")
 ```
-_Findings_:
+
+__Explanation of Findings:__
 My graph shows the comparison between the relative number of smokers and non-smokers who have or do not have health plans. It seems that, between those health plans, there are a higher number of non-smokers, and for those without health plans, there are a higher number of smokers.
 
 
-###Individual Contributions
+### Individual Contributions
 
 #Emily Archambault
 I made a graph showing how the number of people with a health care plan compares between smokers and non-smokers. The data showed that a greater number of people with health care plans were non-smokers, and the greater number of people without health care plans were smokers. I used the geom_count geom function and facet_grid to make the contrast easier to see. I also changed the default labels so it was easier to interpret, the coord function to expand the graph and make the points more visible, and scaled the size of the points so it was easier to compare them. I used a theme to get rid of the x-axis markings, and finally added other labels and a title. I also wrote the section explaining the importance of our question.
