@@ -147,4 +147,5 @@ I made a graph showing how the number of people with a health care plan compares
 ### Eugene Miller
 I graphed the corrilation between height and weight between smokers and non-smokers across different health groups. The data showed no visually discernable difference between the smoking and nonsmoking groups. I used geom_jitter and facet_wrap across two variable to demonstrate this and highlighted each health group with colour coded geom_smooth functions. I also made some formatting and font changes to make the plot appear nicer and easier to read. I changed the labels for both the health group and smoking variables. I helped come up with our guiding research question, and also did formatting work on the team plot as well.
 
-
+### Jingzhi Zhang
+I made a graph counting number of people in different genhlth between different age. The data showed that: for nonsmoker, a great number of people is in excellent and very good genhlth; for smoker, most of people have a genhlth below very good. I used the geom_bar geom function and facet_wrap to make it easier to compare proportions across groups. I also colour a bar chart by using color=genhlth. I changed the default labels of smoking variables, so it was easier to read the plot, and also added new title to my plot as well. I also wrote the section findings & conclusion.
