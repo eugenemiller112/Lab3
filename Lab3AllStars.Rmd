@@ -80,7 +80,7 @@ There are no major differences between smokers and nonsmokers in terms of height
 ---
 
 ### Johnny Tamanaha
-<<<<<<< HEAD
+
 ```{r, echo=FALSE, messgae=FALSE, error=TRUE, fig.align='center'}
 smoke.labs <- c("Nonsmoker", "Smoker")
 names(smoke.labs) <- c("0", "1")
@@ -98,12 +98,12 @@ ggplot(cdc) +
   labs(x="Age", y="Density", color="General Health", title="General Health Density vs Age Split by Smoker/NonSmoker")
 ```
 
-<<<<<<< HEAD
+
 __Explanation of Findings:__ Smokers seem more likely to have poor health at a older age while non-smokers seem to be more likely to have excellent/very good health at a younger age. Density vs Age Split by Smoker/NonSmoker.
 =======
 __Explination of Findings:__ Smokers seem more likely to have poor health at a older age while non-smokers seem to be more likely to have excellent/very good health at a younger age. Besides that there seems to be no significant difference between the groups.
 
->>>>>>> master
+
 
 ---
 
@@ -114,13 +114,11 @@ ggplot(cdc, aes(x = smoke100))+
  labs(x= "smoke100", y="count", fill = "has smoked 100 cigarettes", title = "Count number of people smoke 100 cigarettes or more")
 ```
  
-<<<<<<< HEAD
+
 __Explanation of Findings:__ My plot is to count the number of people who  smokes and who does smoke.
-   If people smoke 100 cigarettes or more through life, then the smoke100 equals 1, which is green color on the plot. And if people doesn't smoke or smoke less than 100 cigarettes, the smoke100 equals 0, which is red showing on the plot. I find people who does not smoke are more than people smoke.
-=======
-__Explanation of Findings:__ My plot is to count the number of people who smokes and who does not smoke.
    If people smoke 100 cigarettes or more through life, then the smoke100 equals 1, which is green color on the plot. And if people doesn't smoke or smoke less than 100 cigarettes, the smoke100 equals 0, which is red showing on the plot. I find people who do not smoke are more than people smoke.
->>>>>>> master
+=======
+
 
 
 ---
