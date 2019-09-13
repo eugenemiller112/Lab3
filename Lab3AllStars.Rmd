@@ -1,5 +1,5 @@
 ---
-title: "Lab 3 Team All Stars"
+title: "Team All Stars Lab 3"
 author: "Johnny Tamanaha, Emily Archambault, Eugene Miller, Kaiyuan Fan, Jingzhi Zhang"
 date: "9/13/2019"
 output: html_document
@@ -67,15 +67,14 @@ names(smoke.labs) <- c("0", "1")
 ggplot(data = cdc, mapping = aes(x = weight, y = height)) +
   geom_jitter() +
   geom_smooth(mapping = aes(color = genhlth, linetype = smoke100==1), se = FALSE) +
-  labs(title = "Comparison of Height Versus Weight in Smokers and Nonsmokers Across Health Status", y = "Height (in)", x = "Weight (lbs)", linetype = "Have you smoked 100 
-cigarretes in your life?") +
+  labs(title = "Comparison of Height Versus Weight in Smokers and Nonsmokers Across Health Status", y = "Height (in)", x = "Weight (lbs)", linetype = "Have you smoked 100 cigarretes in your life?") +
   guides(color = FALSE) +
   theme(plot.title = element_text(hjust = 0.5, size = 10.8), legend.title = element_text(size = 9), legend.text = element_text(size = 7)) +
   facet_wrap(genhlth~smoke100, labeller = labeller(smoke100 = smoke.labs, genhlth = health.labs))
 ```
 
 __Explanation of Findings:__
-There are no major differences between smokers and nonsmokers in terms of height versus weight corrolations even when accounting for health status. This suggestes that health status plays a larger role in determening the ratio of one's height versus weight rather than whether or not an individual is a smoker. This would seem to make sense, as whether or not an individual smokes may not be the largest factor impacting their health. For example, a nonsmoker with a serious illness is likely to not have the same weight to height ratio as a smoker who otherwise is in perfect health. 
+There are no major differences between smokers and nonsmokers in terms of height versus weight correlations even when accounting for health status. This suggests that health status plays a larger role in determining the ratio of one's height versus weight rather than whether or not an individual is a smoker. This would seem to make sense, as to whether or not an individual smokes may not be the largest factor impacting their health. For example, a nonsmoker with a serious illness is likely to not have the same weight to height ratio as a smoker who otherwise is in perfect health. 
 
 ---
 
@@ -150,7 +149,7 @@ My graph shows the comparison between the relative number of smokers and non-smo
 I made a graph showing how the number of people with a health care plan compares between smokers and non-smokers. The data showed that a greater number of people with health care plans were non-smokers, and the greater number of people without health care plans were smokers. I used the geom_count geom function and facet_grid to make the contrast easier to see. I also changed the default labels so it was easier to interpret, the coord function to expand the graph and make the points more visible, and scaled the size of the points so it was easier to compare them. I used a theme to get rid of the x-axis markings, and finally added other labels and a title. I also wrote the section explaining the importance of our question.
 
 ### Eugene Miller
-I graphed the corrilation between height and weight between smokers and non-smokers across different health groups. The data showed no visually discernable difference between the smoking and nonsmoking groups. I used geom_jitter and facet_wrap across two variable to demonstrate this and highlighted each health group with colour coded geom_smooth functions. I also made some formatting and font changes to make the plot appear nicer and easier to read. I changed the labels for both the health group and smoking variables. I helped come up with our guiding research question, and also did formatting work on the team plot as well.
+I graphed the correlation between height and weight between smokers and non-smokers across different health groups. The data showed no visually discernible difference between the smoking and nonsmoking groups. I used geom_jitter and facet_wrap across two variable to demonstrate this and highlighted each health group with colour coded geom_smooth functions. I also made some formatting and font changes to make the plot appear nicer and easier to read. I changed the labels for both the health group and smoking variables. I helped come up with our guiding research question, and also did formatting work on the team plot as well.
 
 ### Jingzhi Zhang
 I made a graph counting number of people in different genhlth between different age. The data showed that: for nonsmoker, a great number of people is in excellent and very good genhlth; for smoker, most of people have a genhlth below very good. I used the geom_bar geom function and facet_wrap to make it easier to compare proportions across groups. I also colour a bar chart by using color=genhlth. I changed the default labels of smoking variables, so it was easier to read the plot, and also added new title to my plot as well. I also wrote the section findings & conclusion.
