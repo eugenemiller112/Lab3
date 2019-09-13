@@ -80,16 +80,30 @@ There are no major differences between smokers and nonsmokers in terms of height
 ---
 
 ### Johnny Tamanaha
+<<<<<<< HEAD
 ```{r, echo=FALSE, messgae=FALSE, error=TRUE, fig.align='center'}
 smoke.labs <- c("Nonsmoker", "Smoker")
 names(smoke.labs) <- c("0", "1")
 ggplot(cdc) +
   geom_freqpoly(mapping=aes(x=age, color=genhlth), alpha=.6, bins=30) +
+=======
+```{r, echo=FALSE, message=FALSE, fig.align='center'}
+smoke.labs <- c("Nonsmoker", "Smoker")
+names(smoke.labs) <- c("0", "1")
+
+ggplot(cdc) +
+  geom_density(mapping=aes(x=age, color=genhlth), alpha=.6) +
+>>>>>>> master
   facet_wrap(~smoke100, labeller = labeller(smoke100 = smoke.labs)) +
   labs(x="Age", y="Density", color="General Health", title="General Health Density vs Age Split by Smoker/NonSmoker")
 ```
 
+<<<<<<< HEAD
 __Explanation of Findings:__ Smokers seem more likely to have poor health at a older age while non-smokers seem to be more likely to have excellent/very good health at a younger age. Density vs Age Split by Smoker/NonSmoker.
+=======
+__Explination of Findings:__ Smokers seem more likely to have poor health at a older age while non-smokers seem to be more likely to have excellent/very good health at a younger age. Besides that there seems to be no significant difference between the groups.
+
+>>>>>>> master
 
 ---
 
@@ -100,8 +114,13 @@ ggplot(cdc, aes(x = smoke100))+
  labs(x= "smoke100", y="count", fill = "has smoked 100 cigarettes", title = "Count number of people smoke 100 cigarettes or more")
 ```
  
+<<<<<<< HEAD
 __Explanation of Findings:__ My plot is to count the number of people who  smokes and who does smoke.
    If people smoke 100 cigarettes or more through life, then the smoke100 equals 1, which is green color on the plot. And if people doesn't smoke or smoke less than 100 cigarettes, the smoke100 equals 0, which is red showing on the plot. I find people who does not smoke are more than people smoke.
+=======
+__Explanation of Findings:__ My plot is to count the number of people who smokes and who does not smoke.
+   If people smoke 100 cigarettes or more through life, then the smoke100 equals 1, which is green color on the plot. And if people doesn't smoke or smoke less than 100 cigarettes, the smoke100 equals 0, which is red showing on the plot. I find people who do not smoke are more than people smoke.
+>>>>>>> master
 
 
 ---
@@ -149,3 +168,10 @@ I graphed the corrilation between height and weight between smokers and non-smok
 
 ### Jingzhi Zhang
 I made a graph counting number of people in different genhlth between different age. The data showed that: for nonsmoker, a great number of people is in excellent and very good genhlth; for smoker, most of people have a genhlth below very good. I used the geom_bar geom function and facet_wrap to make it easier to compare proportions across groups. I also colour a bar chart by using color=genhlth. I changed the default labels of smoking variables, so it was easier to read the plot, and also added new title to my plot as well. I also wrote the section findings & conclusion.
+
+### Johnny Tamanaha
+I graphed the correlation between age and general health, faceted on if the subject smoked 100 cigarettes or not. The data showed that for older people there was a higher density of people with poor health that smoked. Also, for younger people there was a higher density of people with excellent health that didn't smoke. I used the freqpoly geom function and changed the color to make the curves pop out more. I also lowered the alpha to make overlapping lines more distinct. I changed the default labels to make the plot easier to read. I also created the team plot that showed how the proportions of smokers/nonsmokers changed per each general health category. This graph showed higher proportions of non-smokers in better health categories.
+
+### Kaiyuan Fan
+I made a graph is to count the number of people who smoke 100 cigarettes in their life and I find that people who do not smoke is more than people who smoke. In the team plot part, I give the recommendation of action in future based on our facts and conclusion.
+
