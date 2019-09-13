@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "Lab 3 Team All Stars"
 author: "Johnny Tamanaha, Emily Archambault, Eugene Miller, Kaiyuan Fan, Jingzhi Zhang"
@@ -10,119 +9,6 @@ library(tidyverse)
 source("http://www.openintro.org/stat/data/cdc.R")
 cdc <- as_tibble(cdc)
 ```
-
-
----
-
-## Question: Does smoking affect health?
-
----
-
-## Why is this question important?
-
----
-
-## Team Plot:
-
-```{r, echo=FALSE}
-ggplot(data = cdc, aes(group = smoke100)) +
-  geom_bar(mapping=aes(x=genhlth, y = ..prop.., fill=smoke100==1), position="dodge") +
-  scale_y_continuous(labels=scales::percent) +
-  labs(x="General Health", y="% of Smokers/Nonsmokers", fill="Did You Smoke 100 Cigarettes?", title="Percent of Subjects Who've Smoked 100 Cigarettes per Each General Health Category") +
-  theme(plot.title = element_text(hjust = 0.5, size = 9.5))
-```
-
----
-
-## Conclusion:
-
-
----
-
-## Recommendation for Action:
-
-
----
-
-## Individual Sections:
-
-### Eugene Miller
-```{r Eugenes_Code, echo = FALSE, message = FALSE, fig.width=12, fig.height=8}
-health.labs <- c("Excellent Health", "Very Good Health", "Good Health", "Fair Health", "Poor Health")
-names(health.labs) <- c("excellent", "very good", "good", "fair", "poor")
-smoke.labs <- c("Nonsmoker", "Smoker")
-names(smoke.labs) <- c("0", "1")
-
-ggplot(data = cdc, mapping = aes(x = weight, y = height)) +
-  geom_jitter() +
-  geom_smooth(mapping = aes(color = genhlth, linetype = smoke100==1), se = FALSE) +
-  labs(title = "Comparison of Height Versus Weight in Smokers and Nonsmokers Across Health Status", y = "Height (in)", x = "Weight (lbs)", linetype = "Have you smoked 100 
-cigarretes in your life?") +
-  guides(color = FALSE) +
-  theme(plot.title = element_text(hjust = 0.5, size = 10.8), legend.title = element_text(size = 9), legend.text = element_text(size = 7)) +
-  facet_wrap(genhlth~smoke100, labeller = labeller(smoke100 = smoke.labs, genhlth = health.labs))
-```
-
-__Explanation of Findings:__
-There are no major differences between smokers and nonsmokers in terms of height versus weight corrolations even when accounting for health status. This suggestes that health status plays a larger role in determening the ratio of one's height versus weight rather than whether or not an individual is a smoker. This would seem to make sense, as whether or not an individual smokes may not be the largest factor impacting their health. For example, a nonsmoker with a serious illness is likely to not have the same weight to height ratio as a smoker who otherwise is in perfect health. 
-
----
-
-### Johnny Tamanaha
-```{r, echo=FALSE, messgae=FALSE, error=TRUE}
-smoke.labs <- c("Nonsmoker", "Smoker")
-names(smoke.labs) <- c("0", "1")
-ggplot(cdc) +
-  geom_freqpoly(mapping=aes(x=age, color=genhlth), alpha=.6, bins=30) +
-  facet_wrap(~smoke100, labeller = labeller(smoke100 = smoke.labs)) +
-  labs(x="Age", y="Density", color="General Health", title="General Health Density vs Age Split by Smoker/NonSmoker")
-```
-
-**Findings**: Smokers seem more likely to have poor health at a older age while non-smokers seem to be more likely to have excellent/very good health at a younger age. Density vs Age Split by Smoker/NonSmoker.
-
----
-
-### Kaiyuan Fan 
-```{r, echo=FALSE, messgae=FALSE, error=TRUE}
-ggplot(cdc, aes(x = smoke100))+
- geom_bar(aes(fill = smoke100 == 1),alpha = 3/5, position = "identity", show.legend = TRUE) +
- labs(x= "smoke100", y="count", fill = "has smoked 100 cigarettes", title = "Count number of people smoke 100 cigarettes or more")
-```
- 
-__Explanation:__ My plot is to count the number of people who  smokes and who does smoke.
-   If people smoke 100 cigarettes or more through life, then the smoke100 equals 1, which is green color on the plot. And if people doesn't smoke or smoke less than 100 cigarettes, the smoke100 equals 0, which is red showing on the plot. I find people who does not smoke are more than people smoke.
-
-
----
-
-
-### Jingzhi Zhang
-```{r, echo=FALSE, messgae=FALSE, error=TRUE}
-smoke.labs <- c("Nonsmoker", "Smoker")
-names(smoke.labs) <- c("0", "1")
-ggplot(data = cdc, mapping = aes(x = age, color = genhlth)) + 
-  geom_bar()+
-  facet_wrap(~ smoke100,labeller = labeller(smoke100 = smoke.labs), nrow = 2)+
-labs(x= "age", y="count", fill = "genhlth", title = "Count number of people in different genhlth between different age")
-```
-
-__Explanation of Findings:__
-
-In my plot, you can see the numbers of smokers and nonsmokers in different age health distribution. For nonsmokers, most of people have excellent general health. However for smokers, people in excellent generalhealth are less a lot. And the proportion of smokers whose in fair and poor general health are much more than the proportion of nonsmokers.
-=======
----
-title: "Lab 3 Team All Stars"
-author: "Johnny Tamanaha, Emily Archambault, Eugene Miller, Kaiyuan Fan, Jingzhi Zhang"
-date: "9/13/2019"
-output: html_document
----
-```{r, setup, echo = FALSE, message = FALSE, error=TRUE, warning=FALSE}
-library(tidyverse)
-source("http://www.openintro.org/stat/data/cdc.R")
-cdc <- as_tibble(cdc)
-```
-
-
 ---
 
 ## Question: Does smoking affect health?
@@ -136,7 +22,7 @@ This is an important question because if there was a correlation to poor health 
 
 ## Team Plot:
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, fig.align='center'}
 ggplot(data = cdc, aes(group = smoke100)) +
   geom_bar(mapping=aes(x=genhlth, y = ..prop.., fill=smoke100==1), position="dodge") +
   scale_y_continuous(labels=scales::percent) +
@@ -172,7 +58,7 @@ Here are some recommendations for people who still smoke.  Firstly, Social organ
 ## Individual Sections:
 
 ### Eugene Miller
-```{r Eugenes_Code, echo = FALSE, message = FALSE, fig.width=12, fig.height=8}
+```{r Eugenes_Code, echo = FALSE, message = FALSE, fig.width=12, fig.height=8, fig.align='center'}
 health.labs <- c("Excellent Health", "Very Good Health", "Good Health", "Fair Health", "Poor Health")
 names(health.labs) <- c("excellent", "very good", "good", "fair", "poor")
 smoke.labs <- c("Nonsmoker", "Smoker")
@@ -194,7 +80,7 @@ There are no major differences between smokers and nonsmokers in terms of height
 ---
 
 ### Johnny Tamanaha
-```{r, echo=FALSE, messgae=FALSE, error=TRUE}
+```{r, echo=FALSE, messgae=FALSE, error=TRUE, fig.align='center'}
 smoke.labs <- c("Nonsmoker", "Smoker")
 names(smoke.labs) <- c("0", "1")
 ggplot(cdc) +
@@ -203,26 +89,25 @@ ggplot(cdc) +
   labs(x="Age", y="Density", color="General Health", title="General Health Density vs Age Split by Smoker/NonSmoker")
 ```
 
-**Findings**: Smokers seem more likely to have poor health at a older age while non-smokers seem to be more likely to have excellent/very good health at a younger age. Density vs Age Split by Smoker/NonSmoker.
+__Explanation of Findings:__ Smokers seem more likely to have poor health at a older age while non-smokers seem to be more likely to have excellent/very good health at a younger age. Density vs Age Split by Smoker/NonSmoker.
 
 ---
 
 ### Kaiyuan Fan 
-```{r, echo=FALSE, messgae=FALSE, error=TRUE}
+```{r, echo=FALSE, messgae=FALSE, error=TRUE, fig.align='center'}
 ggplot(cdc, aes(x = smoke100))+
  geom_bar(aes(fill = smoke100 == 1),alpha = 3/5, position = "identity", show.legend = TRUE) +
  labs(x= "smoke100", y="count", fill = "has smoked 100 cigarettes", title = "Count number of people smoke 100 cigarettes or more")
 ```
  
-__Explanation:__ My plot is to count the number of people who  smokes and who does smoke.
+__Explanation of Findings:__ My plot is to count the number of people who  smokes and who does smoke.
    If people smoke 100 cigarettes or more through life, then the smoke100 equals 1, which is green color on the plot. And if people doesn't smoke or smoke less than 100 cigarettes, the smoke100 equals 0, which is red showing on the plot. I find people who does not smoke are more than people smoke.
 
 
 ---
 
-
 ### Jingzhi Zhang
-```{r, echo=FALSE, messgae=FALSE, error=TRUE}
+```{r, echo=FALSE, messgae=FALSE, error=TRUE, fig.align='center'}
 smoke.labs <- c("Nonsmoker", "Smoker")
 names(smoke.labs) <- c("0", "1")
 ggplot(data = cdc, mapping = aes(x = age, color = genhlth)) + 
@@ -231,9 +116,7 @@ ggplot(data = cdc, mapping = aes(x = age, color = genhlth)) +
 labs(x= "age", y="count", fill = "genhlth", title = "Count number of people in different genhlth between different age")
 ```
 
-__Explanation of Findings:__
-
-In my plot, you can see the numbers of smokers and nonsmokers in different age health distribution. For nonsmokers, most of people have excellent general health. However for smokers, people in excellent generalhealth are less a lot. And the proportion of smokers whose in fair and poor general health are much more than the proportion of nonsmokers.
+__Explanation of Findings:__ In my plot, you can see the numbers of smokers and nonsmokers in different age health distribution. For nonsmokers, most of people have excellent general health. However for smokers, people in excellent generalhealth are less a lot. And the proportion of smokers whose in fair and poor general health are much more than the proportion of nonsmokers.
 
 
 ---
@@ -241,7 +124,7 @@ In my plot, you can see the numbers of smokers and nonsmokers in different age h
 
 ### Emily Archambault
 
-```{r, echo=FALSE, message=FALSE, error=TRUE}
+```{r, echo=FALSE, message=FALSE, error=TRUE, fig.align='center'}
 smoke.labs <- c("Non-Smoker", "Smoker")
 names(smoke.labs) <- c("0", "1")
 ggplot(data = cdc) + 
@@ -256,8 +139,12 @@ __Explanation of Findings:__
 My graph shows the comparison between the relative number of smokers and non-smokers who have or do not have health plans. It seems that, between those health plans, there are a higher number of non-smokers, and for those without health plans, there are a higher number of smokers.
 
 
-### Individual Contributions
+## Individual Contributions
 
-#Emily Archambault
+### Emily Archambault
 I made a graph showing how the number of people with a health care plan compares between smokers and non-smokers. The data showed that a greater number of people with health care plans were non-smokers, and the greater number of people without health care plans were smokers. I used the geom_count geom function and facet_grid to make the contrast easier to see. I also changed the default labels so it was easier to interpret, the coord function to expand the graph and make the points more visible, and scaled the size of the points so it was easier to compare them. I used a theme to get rid of the x-axis markings, and finally added other labels and a title. I also wrote the section explaining the importance of our question.
->>>>>>> master
+
+### Eugene Miller
+I graphed the corrilation between height and weight between smokers and non-smokers across different health groups. The data showed no visually discernable difference between the smoking and nonsmoking groups. I used geom_jitter and facet_wrap across two variable to demonstrate this and highlighted each health group with colour coded geom_smooth functions. I also made some formatting and font changes to make the plot appear nicer and easier to read. I changed the labels for both the health group and smoking variables. I helped come up with our guiding research question, and also did formatting work on the team plot as well.
+
+
