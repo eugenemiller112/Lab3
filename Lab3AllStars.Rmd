@@ -152,5 +152,5 @@ I graphed the corrilation between height and weight between smokers and non-smok
 ### Johnny Tamanaha
 I graphed the correlation between age and general health, faceted on if the subject smoked 100 cigarettes or not. The data showed that for older people there was a higher density of people with poor health that smoked. Also, for younger people there was a higher density of people with excellent health that didn't smoke. I used the freqpoly geom function and changed the color to make the curves pop out more. I also lowered the alpha to make overlapping lines more distinct. I changed the default labels to make the plot easier to read. I also created the team plot that showed how the proportions of smokers/nonsmokers changed per each general health category. This graph showed higher proportions of non-smokers in better health categories.
 
-###Kaiyuan Fan
+### Kaiyuan Fan
 I made a graph is to count the number of people who smoke 100 cigarettes in their life and I find that people who do not smoke is more than people who smoke. In the team plot part, I give the recommendation of action in future based on our facts and conclusion.
